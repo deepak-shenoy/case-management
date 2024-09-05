@@ -1,1 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+@font-face {
+    font-family: Whitney-Light;
+    src: url(assets/font/Whitney-Light.ttf) format('truetype');
+}
+body { margin: 0; font-family: Whitney-Light, "Helvetica Neue", sans-serif; }
