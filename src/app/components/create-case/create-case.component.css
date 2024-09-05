@@ -1,0 +1,19 @@
+/*
+ * Case Management System
+ * Deepak Shenoy
+ * September 2024
+ *
+ */
+
+* {
+    font-family: Whitney-Light !important;
+}
+
+body, label {
+    font-family: Whitney-Light !important;
+    font-size: large;
+}
+
+table, th, td {
+    border:15px solid white;
+}
