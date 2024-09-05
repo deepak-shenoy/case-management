@@ -1,3 +1,11 @@
+/*
+ * Case Management System
+ * Application
+ * Deepak Shenoy
+ * September 2024
+ *
+ */
+
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
