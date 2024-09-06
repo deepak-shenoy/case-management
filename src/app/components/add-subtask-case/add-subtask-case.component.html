@@ -1,1 +1,88 @@
-<p>add-subtask-case works!</p>
+<br>
+<h4>Add Sub Task</h4>
+<table mat-table>
+    <tr>
+        <td>
+            <mat-form-field style="width: 200px;">
+                <mat-label>Vendor or Other Sub-Case Id</mat-label>
+                <input matInput id="sub-add-1" type="text" value="{{subCase.subCaseId}}" [(ngModel)]="subCase.subCaseId">
+            </mat-form-field>
+            <mat-form-field style="width: 200px;">
+                <mat-label>Status</mat-label>
+                <mat-select [(value)]="subCase.subCaseStatus">
+                    <mat-option value="open">Opened</mat-option>
+                    <mat-option value="closed">Closed</mat-option>
+                    <mat-option value="hold">Hold</mat-option>
+                    <mat-option value="reopened">Re-Opened</mat-option>
+                </mat-select>
+            </mat-form-field>
+            <br>
+            <mat-form-field style="width: 200px;">
+                <mat-label>Service/Vendor</mat-label>
+                <mat-select [(value)]="subCase.subCaseServiceVendor">
+                    <mat-option value="vendor1">Vendor 1</mat-option>
+                    <mat-option value="vendor2">Vendor 2</mat-option>
+                    <mat-option value="vendor3">Vendor 3</mat-option>
+                    <mat-option value="vendor4">Vendor 4</mat-option>
+                    <mat-option value="vendor5">Vendor 5</mat-option>
+                    <mat-option value="vendor6">Vendor 6</mat-option>
+                    <mat-option value="vendor7">Vendor 7</mat-option>
+                    <mat-option value="other">Other</mat-option>
+                    <mat-option value="notapplicable">N/A</mat-option>
+                </mat-select>
+            </mat-form-field>
+        </td>
+        <td>
+            <mat-form-field style="width: 200px;">
+                <mat-label>Category</mat-label>
+                <mat-select [(value)]="subCase.subCaseCategory">
+                    <mat-option value="category1">Category 1</mat-option>
+                    <mat-option value="category2">Category 2</mat-option>
+                    <mat-option value="category3">Category 3</mat-option>
+                    <mat-option value="category4">Category 4</mat-option>
+                    <mat-option value="category5">Category 5</mat-option>
+                    <mat-option value="category6">Category 6</mat-option>
+                </mat-select>
+            </mat-form-field>
+            <br>
+            <mat-form-field  style="width: 200px;">
+                <mat-label>Date First Opened</mat-label>
+                <input matInput [matDatepicker]="dateSubCaseFirstOpened">
+                <mat-hint>MM/DD/YYYY</mat-hint>
+                <mat-datepicker-toggle matIconSuffix [for]="dateSubCaseFirstOpened"></mat-datepicker-toggle>
+                <mat-datepicker #dateSubCaseFirstOpened></mat-datepicker>
+            </mat-form-field>
+        </td>
+    </tr>
+    <td colspan="2">
+        <mat-form-field style="width: 400px;">
+            <mat-label>Sub-Case Title</mat-label>
+            <input matInput id="sub-add-2-0" type="text" value="{{subCase.subCaseTitle}}" [(ngModel)]="subCase.subCaseTitle">
+        </mat-form-field>
+    </td>
+    <tr>
+        <td colspan="2">
+            <mat-form-field style="width: 400px;">
+                <mat-label>Initial Question or Issue</mat-label>
+                <textarea matInput id="sub-add-2-1" type="text" rows="5"></textarea>
+            </mat-form-field>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2">
+            <br>
+            <mat-form-field style="width: 400px;">
+                <mat-label>Member Full Name</mat-label>
+                <input matInput id="sub-add-2-2" type="text" value="{{subCase.subCaseMemberFullName}}" [(ngModel)]="subCase.subCaseMemberFullName">
+            </mat-form-field>
+        </td>
+    </tr>
+</table>
+<div mat-dialog-actions>
+    <button mat-flat-button style="background-color: #11182B" (click)="closeSubCaseItem()">
+        <b style="font-size: small" >Cancel</b>
+    </button>
+    <button mat-flat-button style="background-color: #E51937" [mat-dialog-close]=subCase>
+        <b style="font-size: small" >Add Task</b>
+    </button>
+</div>
