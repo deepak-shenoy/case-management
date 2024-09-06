@@ -22,3 +22,8 @@ table, th, td {
 td {
     vertical-align: top;
 }
+
+.mat-column-subCaseId {
+    max-width: 50px !important;
+    min-width: 50px !important;
+}
