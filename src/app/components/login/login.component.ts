@@ -26,4 +26,18 @@ import { FormsModule } from "@angular/forms";
 })
 export class Login {
 
+  userId = '';
+
+  clearUserId() {
+    this.userId = '';
+  }
+
+  validateAndLogin() {
+    console.log(this.userId)
+    try {
+      console.log("Integration with login - for testing purposes");
+    } catch(e) {
+      console.log("Error - exception occurred when trying to get user with message: ", e);
+    }
+  }
 }
