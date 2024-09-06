@@ -1,9 +1,26 @@
+/*
+ * Case Management System (Style Sheet)
+ * Login Component
+ * Deepak Shenoy
+ * September 2024
+ *
+ */
+
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { MatFormField } from "@angular/material/form-field";
+import { MatIcon } from "@angular/material/icon";
+import { FormsModule } from "@angular/forms";
 
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [],
+  imports: [
+    CommonModule,
+    MatFormField,
+    MatIcon,
+    FormsModule
+  ],
   templateUrl: './login.component.html',
   styleUrl: './login.component.css'
 })
