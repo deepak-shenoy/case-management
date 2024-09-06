@@ -12,3 +12,6 @@ export class Config {
     public static CANCEL_SUBCASE_ENTRY = 'CANCEL_SUBCASE_ENTRY';
 }
 
+export class SubCaseItem {
+    comment?: string;
+}
