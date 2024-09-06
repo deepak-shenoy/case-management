@@ -40,3 +40,7 @@ td {
     border: 1px solid #dfdada;
     overflow: auto;
 }
+
+.mat-column-subCaseId {
+    height: 10px;
+}
