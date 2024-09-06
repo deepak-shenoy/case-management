@@ -15,3 +15,15 @@ export class Config {
 export class SubCaseItem {
     comment?: string;
 }
+
+export class SubCase {
+    comment?: string;
+    subCaseId?: string;
+    subCaseTitle?: string;
+    subCaseCategory?: string;
+    subCaseStatus?: string;
+    dateSubCaseFirstOpened?: string;
+    subCaseCustomerFullName?: string;
+    subCaseServiceVendor?: any;
+    subCaseItems: SubCaseItem[] = new Array();
+}
