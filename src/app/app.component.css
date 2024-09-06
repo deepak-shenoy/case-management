@@ -6,6 +6,11 @@
  *
  */
 
+/* Background color */
+.mdl-layout__header {
+    background: #11172B;
+}
+
 .mat-typography {
     font-family: Whitney-Light !important;
 }
