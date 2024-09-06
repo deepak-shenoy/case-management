@@ -32,3 +32,11 @@ td {
     max-width: 200px !important;
     min-width: 200px !important;
 }
+
+.subcase-table-container {
+    position: relative;
+    min-height: 200px;
+    max-height: 200px;
+    border: 1px solid #dfdada;
+    overflow: auto;
+}
