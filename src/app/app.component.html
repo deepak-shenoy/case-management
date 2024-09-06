@@ -1,1 +1,44 @@
-<router-outlet />
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+    <header class="mdl-layout__header">
+        <div class="mdl-layout__header-row">
+            <div class="mdl-layout-icon"><img id="Logo" src="./assets/logo.png" height="40px" width="auto"></div>
+            <span class="mdl-layout-title" style="font-family: Whitney-Light;font-size:x-large">Case Management</span>
+            <div class="mdl-layout-spacer"></div>
+            <nav class="mdl-navigation mdl-layout--large-screen-only">
+                <!--        <a class="mdl-navigation__link padspace" [routerLink]="['/modelmetrics']">Model Metrics/Performance</a><br>-->
+                <!--        <button mat-button [matMenuTriggerFor]="deployment">Deployment and Settings</button>-->
+                <!--        <mat-menu #deployment="matMenu">-->
+                <!--        </mat-menu>-->
+                <button mat-button style="color:white;font-family: Whitney-Light;font-size: large;" [matMenuTriggerFor]="administration">Administration</button>
+                <mat-menu #administration="matMenu">
+                    <a class="mdl-navigation__link padspace" [routerLink]="['/login']" >Login</a><br>
+                </mat-menu>
+                <button mat-button style="color:white;font-family: Whitney-Light;font-size: large;" [matMenuTriggerFor]="createCase">Create Case</button>
+                <mat-menu #createCase="matMenu" class="customize">
+                    <a class="mdl-navigation__link padspace" [routerLink]="['/create-case']" >Create Case</a><br>
+                    <a class="mdl-navigation__link padspace">Create Vendor Case</a><br>
+                </mat-menu>
+                <button mat-button style="color:white;font-family: Whitney-Light;font-size: large;" [matMenuTriggerFor]="updateCase">Update Case</button>
+                <mat-menu #updateCase="matMenu">
+                    <a class="mdl-navigation__link padspace">Update Case</a><br>
+                    <a class="mdl-navigation__link padspace">Update Vendor Case</a><br>
+                </mat-menu>
+                <button mat-button style="color:white;font-family: Whitney-Light;font-size: large;" [matMenuTriggerFor]="listCases">List Cases</button>
+                <mat-menu #listCases="matMenu">
+                    <a class="mdl-navigation__link padspace">List Cases</a><br>
+                    <a class="mdl-navigation__link padspace">List Vendor Cases</a><br>
+                </mat-menu>
+                <button mat-button style="color:white;font-family: Whitney-Light;font-size: large;" [matMenuTriggerFor]="caseReports">Reports</button>
+                <mat-menu #caseReports="matMenu">
+                    <a class="mdl-navigation__link padspace">List Open Cases</a><br>
+                    <a class="mdl-navigation__link padspace">List Recently Closed</a><br>
+                </mat-menu>
+            </nav>
+        </div>
+
+    </header>
+    <main class="mdl-layout__content" style="padding: 20px;">
+        <router-outlet></router-outlet>
+    </main>
+</div>
+
