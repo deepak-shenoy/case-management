@@ -1,0 +1,22 @@
+/*
+ * Case Management System (Style Sheet)
+ * Add Sub Case - Adds sub case
+ * Deepak Shenoy
+ * September 2024
+ *
+ */
+
+* {
+    font-family: Whitney-Light !important;
+}
+
+body, label  {
+    font-family: Whitney-Light !important;
+    font-size: large;
+}
+
+td {
+    vertical-align: top;
+    horiz-align: left;
+}
+
