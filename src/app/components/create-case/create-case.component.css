@@ -18,3 +18,7 @@ body, label {
 table, th, td {
     border:15px solid white;
 }
+
+td {
+    vertical-align: top;
+}
